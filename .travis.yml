@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+  - '0.11'
+  - '0.10'
+  - '0.8'
+
+cache:
+  directories:
+  - node_modules
+
+deploy:
+  provider: npm
+  email: thomas@squarewolf.nl
+  api_key:
+    secure: QU+TiNwVATlaCmF01wiCMQPLR8smYPI9p6aXkGktcq1QrfNyU+KqqxgLZSWRdaHk6wAVAvxEGMb9s+W5sDJUk0bixlpPIrBNON3HiaXPSxuBY9zVpbvqTHUdc0uFdJ0TvgbMpeF3hqzr4yUKY548xcgQarREGMBc86yUN84mfNo=
+  on:
+    tags: true
+    repo: tvervest/node-neo4j-bulk
