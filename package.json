@@ -1,6 +1,6 @@
 {
   "name": "neo4j-bulk",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "A helper library to set up bulk data inserts for Neo4j databases",
   "main": "index.js",
   "scripts": {
