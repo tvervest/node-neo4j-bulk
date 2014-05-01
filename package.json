@@ -1,7 +1,7 @@
 {
   "name": "neo4j-bulk",
   "version": "0.1.0",
-  "description": "A helper library to set up bulk data inserts for Neo4j databases. The main goal for this library is to create an easy and intuitive way of setting up an initial database state for test suites.",
+  "description": "A helper library to set up bulk data inserts for Neo4j databases",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha"
