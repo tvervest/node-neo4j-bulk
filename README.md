@@ -47,9 +47,12 @@ The `batchObject` variable now contains an array which, when represented as JSON
 
 ## Interface
 
+- - -
+
 ### Constructor - Bulk()
 Returns a new instance of the neo4j-bulk class.
 
+- - -
 
 ### addNode(data)
 Creates a new node and returns the node's reference ID.
@@ -60,6 +63,7 @@ Creates a new node and returns the node's reference ID.
 #### Returns
 The newly created node's reference ID
 
+- - -
 
 ### addLabel(label[, nodeID])
 Adds the label to the specified node, multiple labels can be added to a single node by calling this method multiple times.
@@ -71,6 +75,7 @@ Adds the label to the specified node, multiple labels can be added to a single n
 #### Returns
 Has no return value. An error is thrown if the reference ID is not an existing node, or no nodes have been created.
 
+- - -
 
 ### addRelation(startNode, endNode, relationName[, data])
 Adds a named relationship between two nodes, starting at startNode and pointing to endNode. Optionally, the relation can be given properties using the data parameter.
@@ -84,6 +89,7 @@ Adds a named relationship between two nodes, starting at startNode and pointing 
 #### Returns
 Has no return value. An error is thrown if the startNode or endNode reference ID is not an existing node, or no nodes have been created.
 
+- - -
 
 ### branch()
 Using this method a batch operation can be duplicated. This can be useful when a centralized dataset is used which is then extended per test case. Using  this method the core dataset will remain unaltered.
@@ -91,6 +97,7 @@ Using this method a batch operation can be duplicated. This can be useful when a
 #### Returns
 A copy of the Batch instance.
 
+- - -
 
 ### generateBatch()
 Generates a batch operation object, compatible with the [Neo4j batch API](http://docs.neo4j.org/chunked/stable/rest-api-batch-ops.html) when serialised to JSON.
