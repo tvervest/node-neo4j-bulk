@@ -8,13 +8,6 @@ describe('The neo4j-bulk interface', function() {
 	});
 
 	describe('instances', function () {
-		it('instances should have a method findNodeID', function () {
-			var bulk = new Bulk();
-			expect(bulk).to.be.an('object')
-				.that.has.a.property('findNodeID')
-				.that.is.a('function');
-		});
-
 		it('should have a method addNode', function () {
 			var bulk = new Bulk();
 			expect(bulk).to.be.an('object')
