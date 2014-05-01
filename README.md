@@ -12,7 +12,7 @@ First, install `neo4j-bulk` as a development dependency:
 npm install --save-dev neo4j-bulk
 ```
 
-Then, in your pre-test setup script create a Bulk instance and add data. In this example I'll set up a graph representing the relational status between two purely fictional \*couch\* \*couch\* people:
+Then, in your pre-test setup script create a Bulk instance and add data. In this example I'll set up a graph representing the relational status between two purely fictional \*cough\* \*cough\* people:
 
 ```javascript
 var Bulk = require('neo4j-bulk');
