@@ -14,6 +14,10 @@
     "bulk",
     "state"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tvervest/node-neo4j-bulk"
+  },
   "author": "Thomas Vervest <thomas@squarewolf.nl> (http://www.squarewolf.nl)",
   "license": "MIT",
   "devDependencies": {
