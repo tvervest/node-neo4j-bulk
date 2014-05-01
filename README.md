@@ -104,3 +104,14 @@ Generates a batch operation object, compatible with the [Neo4j batch API](http:/
 
 #### Returns
 An array containing the batch operations.
+
+- - -
+
+### findNodeID(predicate)
+Searches the collection of nodes for a node matching the predicate, and then returns the matching node's reference ID.
+
+#### Parameters
+**predicate** *(function)*: The predicate function used to test a match. The function will take a single argument, which is the iterated node, and should return true if the predicate matches, or false otherwise.
+
+#### Returns
+The reference ID of the first node that matches the predicate, false otherwise.
