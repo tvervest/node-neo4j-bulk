@@ -91,6 +91,20 @@ Has no return value. An error is thrown if the startNode or endNode reference ID
 
 - - -
 
+### addRelationByID(startNodeID, endNodeID, relationName[, data])
+Adds a named relationship between two nodes, starting at the node with id `startNodeID` and pointing to the node with id `endNode`. Optionally, the relation can be given properties using the data parameter.
+
+#### Parameters
+**startNodeID** *(number)*: The ID of a previously inserted node, from which the relationship will point
+**endNodeID** *(number)*: The ID of a previously inserted node, to which the relationship will point
+**relationName** *(string)*: The name of the relationship
+**data** *(object, optional)*: The properties of the relationship
+
+#### Returns
+Has no return value. An error is thrown if the startNode or endNode reference ID is an invalid node ID.
+
+- - -
+
 ### branch()
 Using this method a batch operation can be duplicated. This can be useful when a centralized dataset is used which is then extended per test case. Using  this method the core dataset will remain unaltered.
 
