@@ -1,7 +1,7 @@
 /**
 * Test file when using neo4j-bulk as a cli tool
 */
-var Bulk = require('neo4j-bulk');
+var Bulk = require('..');
 module.exports = batch = new Bulk();
 
 var user1 = batch.addNode({

@@ -1,4 +1,4 @@
-var Bulk = require('neo4j-bulk');
+var Bulk = require('n..');
 module.exports = batch = new Bulk();
 
 var device1 = batch.addNode({
