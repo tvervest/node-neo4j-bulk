@@ -6,6 +6,9 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha"
   },
+  "bin": {
+    "neo4j-bulk": "./bin/neo4j-bulk.js"
+  },
   "keywords": [
     "neo4j",
     "test",
@@ -26,6 +29,7 @@
     "nock": "^1.1.0"
   },
   "dependencies": {
+    "cli": "^0.6.5",
     "request": "^2.53.0"
   }
 }
