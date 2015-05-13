@@ -1,8 +1,4 @@
 var Bulk = require('../index');
-var os = process.platform;
-if (os === "darwin") {
-    module.paths.push("/opt/local/lib/node_modules");
-}
 var expect = require('chai').expect;
 
 describe('#addLabel(label[, nodeID])', function () {

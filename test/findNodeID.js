@@ -1,7 +1,3 @@
-var os = process.platform;
-if (os === "darwin") {
-    module.paths.push("/opt/local/lib/node_modules");
-}
 var Bulk = require('../index');
 var expect = require('chai').expect;
 
