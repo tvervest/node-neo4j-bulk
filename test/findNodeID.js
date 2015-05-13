@@ -1,74 +1,78 @@
+var os = process.platform;
+if (os === "darwin") {
+    module.paths.push("/opt/local/lib/node_modules");
+}
 var Bulk = require('../index');
 var expect = require('chai').expect;
 
-describe('#findNodeID(predicate)', function() {
-	it('should iterate the predicate over the collection of nodes if no node matches', function () {
-		var bulk = new Bulk();
-		bulk.addNode({
-			'hello': 'world',
-		});
-		bulk.addNode({
-			'just so you know': 'this is a test',
-		});
+describe('#findNodeID(predicate)', function () {
+    it('should iterate the predicate over the collection of nodes if no node matches', function () {
+        var bulk = new Bulk();
+        bulk.addNode({
+            'hello': 'world',
+        });
+        bulk.addNode({
+            'just so you know': 'this is a test',
+        });
 
-		var count = 0;
+        var count = 0;
 
-		var nodeID = bulk.findNodeID(function (node) {
-			count++;
-			return false;
-		});
+        var nodeID = bulk.findNodeID(function (node) {
+            count++;
+            return false;
+        });
 
-		expect(count).to.equal(2);
-	});
+        expect(count).to.equal(2);
+    });
 
-	it('should stop iterating the predicate over the collection of nodes when a match is found', function () {
-		var bulk = new Bulk();
-		bulk.addNode({
-			'hello': 'world',
-		});
-		bulk.addNode({
-			'just so you know': 'this is a test',
-		});
+    it('should stop iterating the predicate over the collection of nodes when a match is found', function () {
+        var bulk = new Bulk();
+        bulk.addNode({
+            'hello': 'world',
+        });
+        bulk.addNode({
+            'just so you know': 'this is a test',
+        });
 
-		var count = 0;
+        var count = 0;
 
-		var nodeID = bulk.findNodeID(function (node) {
-			count++;
-			return true;
-		});
+        var nodeID = bulk.findNodeID(function (node) {
+            count++;
+            return true;
+        });
 
-		expect(count).to.equal(1);
-	});
+        expect(count).to.equal(1);
+    });
 
-	it('should return the correct node ID when a match is found', function () {
-		var bulk = new Bulk();
-		var firstNode = bulk.addNode({
-			'hello': 'world',
-		});
-		bulk.addNode({
-			'just so you know': 'this is a test',
-		});
+    it('should return the correct node ID when a match is found', function () {
+        var bulk = new Bulk();
+        var firstNode = bulk.addNode({
+            'hello': 'world',
+        });
+        bulk.addNode({
+            'just so you know': 'this is a test',
+        });
 
-		var nodeID = bulk.findNodeID(function (node) {
-			return node.hello === 'world';
-		});
+        var nodeID = bulk.findNodeID(function (node) {
+            return node.hello === 'world';
+        });
 
-		expect(nodeID).to.equal(firstNode);
-	});
+        expect(nodeID).to.equal(firstNode);
+    });
 
-	it('should return false if no node matches', function () {
-		var bulk = new Bulk();
-		var firstNode = bulk.addNode({
-			'hello': 'world',
-		});
-		bulk.addNode({
-			'just so you know': 'this is a test',
-		});
+    it('should return false if no node matches', function () {
+        var bulk = new Bulk();
+        var firstNode = bulk.addNode({
+            'hello': 'world',
+        });
+        bulk.addNode({
+            'just so you know': 'this is a test',
+        });
 
-		var nodeID = bulk.findNodeID(function (node) {
-			return false;
-		});
+        var nodeID = bulk.findNodeID(function (node) {
+            return false;
+        });
 
-		expect(nodeID).to.equal(false);
-	});
+        expect(nodeID).to.equal(false);
+    });
 });

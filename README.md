@@ -65,6 +65,18 @@ The newly created node's reference ID
 
 - - -
 
+### updateNodeByID(nodeID, data)
+Updates a previously generated node and returns the node's reference ID.
+
+#### Parameters
+**nodeID** *(number)*: The reference ID of a previously generated node
+**data** *(object)*: An object containing the node's properties
+
+#### Returns
+true if node was updated or false if the node was not updated (because data was undefined)
+
+- - -
+
 ### addLabel(label[, nodeID])
 Adds the label to the specified node, multiple labels can be added to a single node by calling this method multiple times.
 
@@ -105,6 +117,19 @@ Has no return value. An error is thrown if the startNode or endNode reference ID
 
 - - -
 
+### updateRelationByID(relationID, relationName, data)
+Updates a relationship between two nodes.
+
+#### Parameters
+**relationID** *(number)*: The ID of a previously created relation
+**relationName** *(string)*: The name of the relationship
+**data** *(object)*: The properties of the relationship
+
+#### Returns
+true if relation was updated or false if the relation was not updated (because data was undefined)
+
+- - -
+
 ### branch()
 Using this method a batch operation can be duplicated. This can be useful when a centralized dataset is used which is then extended per test case. Using  this method the core dataset will remain unaltered.
 
@@ -121,6 +146,19 @@ An array containing the batch operations.
 
 - - -
 
+### executeBatch(host, batch[, done])
+Executes a POST request with the given batch to the specified neo4j host.
+
+#### Parameters
+**host** *(string)*: The neo4j hostname.
+**batch** *(string)*: The batch request JSON.
+**done** *(function, optional)*: Callback error handler which takes a single argument, the error which may have been thrown
+
+#### Returns
+Has no return value. Use the optional callback parameter for any error handling.
+
+- - -
+
 ### findNodeID(predicate)
 Searches the collection of nodes for a node matching the predicate, and then returns the matching node's reference ID.
 
@@ -129,3 +167,15 @@ Searches the collection of nodes for a node matching the predicate, and then ret
 
 #### Returns
 The reference ID of the first node that matches the predicate, false otherwise.
+
+- - -
+
+### findRelationIDByNodeIDs(startNodeID, endNodeID)
+Searches the collection of relations for a relation with the matching start and end node IDs, and then returns the matching node's reference ID.
+
+#### Parameters
+**startNodeID** *(number)*: The ID of a previously inserted node, from which the relationship will point
+**endNodeID** *(number)*: The ID of a previously inserted node, to which the relationship will point
+
+#### Returns
+The reference ID of the first relation that matches the start and end node IDs, false otherwise.

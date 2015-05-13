@@ -1,31 +1,30 @@
 {
-  "name": "neo4j-bulk",
-  "version": "0.1.3",
-  "description": "A helper library to set up bulk data inserts for Neo4j databases",
-  "main": "index.js",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha"
+  "name" : "neo4j-bulk",
+  "version" : "0.1.3",
+  "description" : "A helper library to set up bulk data inserts for Neo4j databases",
+  "main" : "./index.js",
+  "scripts" : {
+    "test" : "./node_modules/.bin/mocha"
   },
-  "keywords": [
-    "neo4j",
-    "test",
-    "suite",
-    "test-suite",
-    "bulk",
-    "state"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/tvervest/node-neo4j-bulk"
+  "keywords" : [ "neo4j", "test", "suite", "test-suite", "bulk", "state" ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/tvervest/node-neo4j-bulk"
   },
-  "author": "Thomas Vervest <thomas@squarewolf.nl> (http://www.squarewolf.nl)",
-  "license": "MIT",
-  "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.18.2",
-    "nock": "^1.1.0"
+  "author" : {
+    "name" : "Adam Russell <adam.russell@optum.com>",
+    "email" : "Adam Russell <adam.russell@optum.com>"
   },
-  "dependencies": {
-    "request": "^2.53.0"
+  "license" : "MIT",
+  "devDependencies" : {
+    "chai" : "^1.9.1",
+    "mocha" : "^1.18.2",
+    "nock" : "^1.1.0"
+  },
+  "dependencies" : {
+    "request" : "^2.53.0"
+  },
+  "bugs" : {
+    "url" : "null"
   }
 }
